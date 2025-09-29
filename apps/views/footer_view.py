@@ -2,9 +2,9 @@ from drf_spectacular.utils import extend_schema
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import AllowAny
 
-from apps.models import Footer, Partners, FooterSimple
+from apps.models import Footer, Partners, Stats
 from apps.serializers.footer_serializer import FooterModelSerializer, PartnerModelSerializer, \
-    FooterSimpleModelSerializer
+    StatsModelSerializer
 
 
 @extend_schema(tags=["footer"])
@@ -22,7 +22,7 @@ class PartnerListCreate(ListCreateAPIView):
 
 
 @extend_schema(tags=["footer"])
-class FooterSimpleListCreate(ListCreateAPIView):
-    queryset = FooterSimple.objects.all()
-    serializer_class = FooterSimpleModelSerializer
+class StatsListCreate(ListCreateAPIView):
+    queryset = Stats.objects.all()
+    serializer_class = StatsModelSerializer
     permission_classes = (AllowAny,)

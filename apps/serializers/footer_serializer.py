@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import Footer,Partners, FooterSimple
+from apps.models import Footer,Partners, Stats
 
 
 class FooterModelSerializer(ModelSerializer):
@@ -15,7 +15,7 @@ class PartnerModelSerializer(ModelSerializer):
         fields = '__all__'
 
 
-class FooterSimpleModelSerializer(ModelSerializer):
+class StatsModelSerializer(ModelSerializer):
     class Meta:
-        model = FooterSimple
+        model = Stats
         fields = '__all__'
