@@ -1,6 +1,6 @@
 from django.db.models import F
 from drf_spectacular.utils import extend_schema
-from rest_framework.generics import GenericAPIView, ListAPIView
+from rest_framework.generics import ListAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
