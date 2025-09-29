@@ -35,4 +35,3 @@ class PartnersModelAdmin(ModelAdmin):
 @admin.register(BlogPost)
 class BlogPostModelAdmin(ModelAdmin):
     exclude = 'slug',
-
