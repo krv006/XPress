@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 from import_export.admin import ImportExportModelAdmin
 
-from apps.models import Footer, FooterSimple, Partners
+from apps.models import Footer, FooterSimple, Partners, BlogPost
 from apps.models.main_model import MainPage, ProfessionalTeam
 from apps.resources import MainPageResource
 
@@ -30,3 +30,9 @@ class FooterSimpleModelAdmin(ModelAdmin):
 @admin.register(Partners)
 class PartnersModelAdmin(ModelAdmin):
     pass
+
+
+@admin.register(BlogPost)
+class BlogPostModelAdmin(ModelAdmin):
+    exclude = 'slug',
+

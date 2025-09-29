@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.views import BlogDetailGenericAPIView, BlogGenericAPIView
+from apps.views import BlogDetailListAPIView, BlogListAPIView
 from apps.views import FooterListCreate, PartnerListCreate, FooterSimpleListCreate
 from apps.views import MainPageListCreate, ProfessionalTeamListCreate
 
@@ -13,6 +13,6 @@ urlpatterns = [
     path('footer-simple/', FooterSimpleListCreate.as_view(), name='footer_simple'),
     path('partners/', PartnerListCreate.as_view(), name='partners'),
     # todo blog
-    path('blog-datil/', BlogDetailGenericAPIView.as_view(), name='blog_detail'),
-    path('blog/', BlogGenericAPIView.as_view(), name='blog'),
+    path('blog-datil/', BlogDetailListAPIView.as_view(), name='blog_detail'),
+    path('blog/', BlogListAPIView.as_view(), name='blog'),
 ]

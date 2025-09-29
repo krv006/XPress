@@ -193,7 +193,7 @@ CKEDITOR_5_CONFIGS = {
 }
 
 JAZZMIN_UI_TWEAKS = {
-    "theme": "darkly",
+    # "theme": "darkly",
     # "theme": "slate",
 
 }
