@@ -1,3 +1,5 @@
+from django.db.models import F
+from drf_spectacular.utils import extend_schema
 from rest_framework.generics import GenericAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -6,6 +8,7 @@ from apps.models import BlogPost
 from apps.serializers.blog_serializer import BlogModelSerializer, BlogDetailModelSerializer
 
 
+@extend_schema(tags=["blog"])
 class BlogGenericAPIView(GenericAPIView):
     queryset = BlogPost.objects.all()
     serializer_class = BlogModelSerializer
@@ -22,6 +25,7 @@ class BlogGenericAPIView(GenericAPIView):
         return Response(serializer.data)
 
 
+@extend_schema(tags=["blog"])
 class BlogDetailGenericAPIView(GenericAPIView):
     queryset = BlogPost.objects.all()
     serializer_class = BlogDetailModelSerializer

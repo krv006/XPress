@@ -1,8 +1,8 @@
 from django.urls import path
 
-from apps.views.blog_view import BlogDetailGenericAPIView, BlogGenericAPIView
-from apps.views.footer_view import FooterListCreate, PartnerListCreate, FooterSimpleListCreate
-from apps.views.main_view import MainPageListCreate, ProfessionalTeamListCreate
+from apps.views import BlogDetailGenericAPIView, BlogGenericAPIView
+from apps.views import FooterListCreate, PartnerListCreate, FooterSimpleListCreate
+from apps.views import MainPageListCreate, ProfessionalTeamListCreate
 
 urlpatterns = [
     # todo main
