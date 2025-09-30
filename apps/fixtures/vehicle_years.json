@@ -1,0 +1,261 @@
+[
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 1,
+        "fields": {
+            "value": "1984"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 2,
+        "fields": {
+            "value": "1985"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 3,
+        "fields": {
+            "value": "1986"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 4,
+        "fields": {
+            "value": "1987"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 5,
+        "fields": {
+            "value": "1988"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 6,
+        "fields": {
+            "value": "1989"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 7,
+        "fields": {
+            "value": "1990"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 8,
+        "fields": {
+            "value": "1991"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 9,
+        "fields": {
+            "value": "1992"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 10,
+        "fields": {
+            "value": "1993"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 11,
+        "fields": {
+            "value": "1994"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 12,
+        "fields": {
+            "value": "1995"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 13,
+        "fields": {
+            "value": "1996"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 14,
+        "fields": {
+            "value": "1997"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 15,
+        "fields": {
+            "value": "1998"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 16,
+        "fields": {
+            "value": "1999"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 17,
+        "fields": {
+            "value": "2000"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 18,
+        "fields": {
+            "value": "2001"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 19,
+        "fields": {
+            "value": "2002"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 20,
+        "fields": {
+            "value": "2003"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 21,
+        "fields": {
+            "value": "2004"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 22,
+        "fields": {
+            "value": "2005"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 23,
+        "fields": {
+            "value": "2006"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 24,
+        "fields": {
+            "value": "2007"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 25,
+        "fields": {
+            "value": "2008"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 26,
+        "fields": {
+            "value": "2009"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 27,
+        "fields": {
+            "value": "2010"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 28,
+        "fields": {
+            "value": "2011"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 29,
+        "fields": {
+            "value": "2012"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 30,
+        "fields": {
+            "value": "2013"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 31,
+        "fields": {
+            "value": "2014"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 32,
+        "fields": {
+            "value": "2015"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 33,
+        "fields": {
+            "value": "2016"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 34,
+        "fields": {
+            "value": "2017"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 35,
+        "fields": {
+            "value": "2018"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 36,
+        "fields": {
+            "value": "2019"
+        }
+    },
+    {
+        "model": "myapp.vehicleyear",
+        "pk": 37,
+        "fields": {
+            "value": "2020"
+        }
+    }
+]

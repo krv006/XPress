@@ -1,0 +1,954 @@
+[
+    {
+        "model": "models.vehiclemake",
+        "pk": 1,
+        "fields": {
+            "value": "AM General"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 2,
+        "fields": {
+            "value": "ASC Incorporated"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 3,
+        "fields": {
+            "value": "Acura"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 4,
+        "fields": {
+            "value": "Alfa Romeo"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 5,
+        "fields": {
+            "value": "American Motors Corporation"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 6,
+        "fields": {
+            "value": "Aston Martin"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 7,
+        "fields": {
+            "value": "Audi"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 8,
+        "fields": {
+            "value": "Aurora Cars Ltd"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 9,
+        "fields": {
+            "value": "Autokraft Limited"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 10,
+        "fields": {
+            "value": "Avanti Motor Corporation"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 11,
+        "fields": {
+            "value": "Azure Dynamics"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 12,
+        "fields": {
+            "value": "BMW"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 13,
+        "fields": {
+            "value": "BMW Alpina"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 14,
+        "fields": {
+            "value": "BYD"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 15,
+        "fields": {
+            "value": "Bentley"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 16,
+        "fields": {
+            "value": "Bertone"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 17,
+        "fields": {
+            "value": "Bill Dovell Motor Car Company"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 18,
+        "fields": {
+            "value": "Bitter Gmbh and Co. Kg"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 19,
+        "fields": {
+            "value": "Bugatti"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 20,
+        "fields": {
+            "value": "Buick"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 21,
+        "fields": {
+            "value": "CCC Engineering"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 22,
+        "fields": {
+            "value": "CODA Automotive"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 23,
+        "fields": {
+            "value": "CX Automotive"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 24,
+        "fields": {
+            "value": "Cadillac"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 25,
+        "fields": {
+            "value": "Chevrolet"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 26,
+        "fields": {
+            "value": "Chrysler"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 27,
+        "fields": {
+            "value": "Consulier Industries Inc"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 28,
+        "fields": {
+            "value": "Dabryan Coach Builders Inc"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 29,
+        "fields": {
+            "value": "Dacia"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 30,
+        "fields": {
+            "value": "Daewoo"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 31,
+        "fields": {
+            "value": "Daihatsu"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 32,
+        "fields": {
+            "value": "Dodge"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 33,
+        "fields": {
+            "value": "E. P. Dutton, Inc."
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 34,
+        "fields": {
+            "value": "Eagle"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 35,
+        "fields": {
+            "value": "Environmental Rsch and Devp Corp"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 36,
+        "fields": {
+            "value": "Evans Automobiles"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 37,
+        "fields": {
+            "value": "Excalibur Autos"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 38,
+        "fields": {
+            "value": "Federal Coach"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 39,
+        "fields": {
+            "value": "Ferrari"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 40,
+        "fields": {
+            "value": "Fiat"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 41,
+        "fields": {
+            "value": "Fisker"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 42,
+        "fields": {
+            "value": "Ford"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 43,
+        "fields": {
+            "value": "GMC"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 44,
+        "fields": {
+            "value": "General Motors"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 45,
+        "fields": {
+            "value": "Genesis"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 46,
+        "fields": {
+            "value": "Geo"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 47,
+        "fields": {
+            "value": "Goldacre"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 48,
+        "fields": {
+            "value": "Grumman Allied Industries"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 49,
+        "fields": {
+            "value": "Grumman Olson"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 50,
+        "fields": {
+            "value": "Honda"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 51,
+        "fields": {
+            "value": "Hummer"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 52,
+        "fields": {
+            "value": "Hyundai"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 53,
+        "fields": {
+            "value": "Import Foreign Auto Sales Inc"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 54,
+        "fields": {
+            "value": "Import Trade Services"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 55,
+        "fields": {
+            "value": "Infiniti"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 56,
+        "fields": {
+            "value": "Isis Imports Ltd"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 57,
+        "fields": {
+            "value": "Isuzu"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 58,
+        "fields": {
+            "value": "J.K. Motors"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 59,
+        "fields": {
+            "value": "JBA Motorcars, Inc."
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 60,
+        "fields": {
+            "value": "Jaguar"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 61,
+        "fields": {
+            "value": "Jeep"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 62,
+        "fields": {
+            "value": "Karma"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 63,
+        "fields": {
+            "value": "Kenyon Corporation Of America"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 64,
+        "fields": {
+            "value": "Kia"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 65,
+        "fields": {
+            "value": "Koenigsegg"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 66,
+        "fields": {
+            "value": "Laforza Automobile Inc"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 67,
+        "fields": {
+            "value": "Lambda Control Systems"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 68,
+        "fields": {
+            "value": "Lamborghini"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 69,
+        "fields": {
+            "value": "Land Rover"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 70,
+        "fields": {
+            "value": "Lexus"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 71,
+        "fields": {
+            "value": "Lincoln"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 72,
+        "fields": {
+            "value": "London Coach Co Inc"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 73,
+        "fields": {
+            "value": "London Taxi"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 74,
+        "fields": {
+            "value": "Lotus"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 75,
+        "fields": {
+            "value": "MINI"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 76,
+        "fields": {
+            "value": "Mahindra"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 77,
+        "fields": {
+            "value": "Maserati"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 78,
+        "fields": {
+            "value": "Maybach"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 79,
+        "fields": {
+            "value": "Mazda"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 80,
+        "fields": {
+            "value": "McLaren Automotive"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 81,
+        "fields": {
+            "value": "Mcevoy Motors"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 82,
+        "fields": {
+            "value": "Mercedes-Benz"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 83,
+        "fields": {
+            "value": "Mercury"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 84,
+        "fields": {
+            "value": "Merkur"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 85,
+        "fields": {
+            "value": "Mitsubishi"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 86,
+        "fields": {
+            "value": "Mobility Ventures LLC"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 87,
+        "fields": {
+            "value": "Morgan"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 88,
+        "fields": {
+            "value": "Nissan"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 89,
+        "fields": {
+            "value": "Oldsmobile"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 90,
+        "fields": {
+            "value": "PAS Inc - GMC"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 91,
+        "fields": {
+            "value": "PAS, Inc"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 92,
+        "fields": {
+            "value": "Pagani"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 93,
+        "fields": {
+            "value": "Panos"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 94,
+        "fields": {
+            "value": "Panoz Auto-Development"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 95,
+        "fields": {
+            "value": "Panther Car Company Limited"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 96,
+        "fields": {
+            "value": "Peugeot"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 97,
+        "fields": {
+            "value": "Pininfarina"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 98,
+        "fields": {
+            "value": "Plymouth"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 99,
+        "fields": {
+            "value": "Pontiac"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 100,
+        "fields": {
+            "value": "Porsche"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 101,
+        "fields": {
+            "value": "Quantum Technologies"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 102,
+        "fields": {
+            "value": "Qvale"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 103,
+        "fields": {
+            "value": "RUF Automobile"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 104,
+        "fields": {
+            "value": "Ram"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 105,
+        "fields": {
+            "value": "Red Shift Ltd."
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 106,
+        "fields": {
+            "value": "Renault"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 107,
+        "fields": {
+            "value": "Rolls-Royce"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 108,
+        "fields": {
+            "value": "Roush Performance"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 109,
+        "fields": {
+            "value": "Ruf Automobile Gmbh"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 110,
+        "fields": {
+            "value": "S and S Coach Company  E.p. Dutton"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 111,
+        "fields": {
+            "value": "SRT"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 112,
+        "fields": {
+            "value": "Saab"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 113,
+        "fields": {
+            "value": "Saleen"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 114,
+        "fields": {
+            "value": "Saleen Performance"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 115,
+        "fields": {
+            "value": "Saturn"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 116,
+        "fields": {
+            "value": "Scion"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 117,
+        "fields": {
+            "value": "Shelby"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 118,
+        "fields": {
+            "value": "Spyker"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 119,
+        "fields": {
+            "value": "Sterling"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 120,
+        "fields": {
+            "value": "Subaru"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 121,
+        "fields": {
+            "value": "Superior Coaches Div E.p. Dutton"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 122,
+        "fields": {
+            "value": "Suzuki"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 123,
+        "fields": {
+            "value": "TVR Engineering Ltd"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 124,
+        "fields": {
+            "value": "Tecstar, LP"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 125,
+        "fields": {
+            "value": "Tesla"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 126,
+        "fields": {
+            "value": "Texas Coach Company"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 127,
+        "fields": {
+            "value": "Toyota"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 128,
+        "fields": {
+            "value": "VPG"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 129,
+        "fields": {
+            "value": "Vector"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 130,
+        "fields": {
+            "value": "Vixen Motor Company"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 131,
+        "fields": {
+            "value": "Volga Associated Automobile"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 132,
+        "fields": {
+            "value": "Volkswagen"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 133,
+        "fields": {
+            "value": "Volvo"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 134,
+        "fields": {
+            "value": "Wallace Environmental"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 135,
+        "fields": {
+            "value": "Yugo"
+        }
+    },
+    {
+        "model": "models.vehiclemake",
+        "pk": 136,
+        "fields": {
+            "value": "smart"
+        }
+    }
+]
