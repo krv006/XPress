@@ -1,36 +1,37 @@
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import BlogPost
+from apps.models import BlogPost, Category, BlogImage
 
 
-class BlogModelSerializer(ModelSerializer):
-    main_image_url = SerializerMethodField()
-    published_date = SerializerMethodField()
-
+class CategoryModelSerializer(ModelSerializer):
     class Meta:
-        model = BlogPost
-        fields = (
-            'id',
-            'title',
-            'short_description',
-            'published_date',
-            'views',
-            'main_image_url',
-        )
-        read_only_fields = ('views',)
-
-    def get_main_image_url(self, obj):
-        request = self.context.get("request")
-        return request.build_absolute_uri(obj.main_image.url) if obj.main_image else None
+        model = Category
+        fields = '__all__'
 
     def get_published_date(self, obj):
         return obj.published_at.strftime('%B %d %Y') if obj.published_at else None
 
 
-class BlogDetailModelSerializer(ModelSerializer):
-    main_image_url = SerializerMethodField()
-    back_image_url = SerializerMethodField()
+class BlogImageModelSerializer(ModelSerializer):
+    post = SerializerMethodField()
+
+    class Meta:
+        model = BlogImage
+        fields = 'id', 'image', 'post',
+
+    def get_post(self, obj):
+        if obj.post:
+            return {
+                'id': obj.post.id,
+                'title': obj.post.category.title,
+                'views': obj.post.views,
+            }
+
+
+class BlogModelSerializer(ModelSerializer):
+    images = BlogImageModelSerializer(many=True, read_only=True)  # <-- shu yer to‘g‘rilandi
+    category = SerializerMethodField()
     published_date = SerializerMethodField()
 
     class Meta:
@@ -38,13 +39,14 @@ class BlogDetailModelSerializer(ModelSerializer):
         fields = '__all__'
         read_only_fields = ('views',)
 
-    def get_main_image_url(self, obj):
-        request = self.context.get("request")
-        return request.build_absolute_uri(obj.main_image.url) if obj.main_image else None
-
-    def get_back_image_url(self, obj):
-        request = self.context.get("request")
-        return request.build_absolute_uri(obj.back_image.url) if obj.back_image else None
+    def get_category(self, obj):
+        if obj.category:
+            return {
+                'id': obj.category.id,
+                'title': obj.category.title,
+                'slug': obj.category.slug
+            }
+        return None
 
     def get_published_date(self, obj):
         return obj.published_at.strftime('%B %d %Y') if obj.published_at else None

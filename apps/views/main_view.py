@@ -2,10 +2,11 @@ from drf_spectacular.utils import extend_schema
 from rest_framework.generics import ListCreateAPIView, ListAPIView
 from rest_framework.permissions import AllowAny
 
-from apps.models import MainPage, QuoteRequest, ChooseXpress, Overview, Stats
+from apps.models import MainPage, QuoteRequest, ChooseXpress, Overview, Stats, FAQ
 from apps.models.main_model import SimpleSteps
 from apps.serializers import MainPageModelSerializer, DirectlyContactSerializer, SimpleContactSerializer, \
-    SimpleStepsModelSerializer, ChooseXpressModelSerializer, OverviewModelSerializer, StatsModelSerializer
+    SimpleStepsModelSerializer, ChooseXpressModelSerializer, OverviewModelSerializer, StatsModelSerializer, \
+    FAQModelSerializer
 
 
 @extend_schema(tags=["main"])
@@ -35,6 +36,11 @@ class SimpleListAPIView(ListAPIView):
     serializer_class = SimpleContactSerializer
     permission_classes = (AllowAny,)
 
+
+@extend_schema(tags=["main"])
+class FaqFrequentlyListAPIView(ListAPIView):
+    queryset = FAQ.objects.filter(category=FAQ.Choose.FREQUENTLY)
+    serializer_class = FAQModelSerializer
 
 @extend_schema(tags=["contact"])
 class DirectlyContactListAPIView(ListCreateAPIView):

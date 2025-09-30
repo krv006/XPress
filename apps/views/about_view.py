@@ -16,8 +16,3 @@ class FAQListAPIView(ListAPIView):
     queryset = FAQ.objects.filter(category=FAQ.Choose.FAQ)
     serializer_class = FAQModelSerializer
 
-
-@extend_schema(tags=["main"])
-class FaqFrequentlyListAPIView(ListAPIView):
-    queryset = FAQ.objects.filter(category=FAQ.Choose.FREQUENTLY)
-    serializer_class = FAQModelSerializer

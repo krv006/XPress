@@ -1,9 +1,9 @@
 from django.urls import path
 
-from apps.views import BlogDetailAPIView, BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
+from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
-    FaqFrequentlyListAPIView
+    FaqFrequentlyListAPIView, CategoryListAPIView, BlogImageListAPIView
 
 urlpatterns = [
     # todo main
@@ -20,8 +20,9 @@ urlpatterns = [
     path('footer-simple/', StatsListCreate.as_view(), name='footer_simple'),
     path('partners/', PartnerListCreate.as_view(), name='partners'),
     # todo blog
-    path('blog-detail/<int:pk>', BlogDetailAPIView.as_view(), name='blog_detail'),
+    path('category/', CategoryListAPIView.as_view(), name='category'),
     path('blog/', BlogListAPIView.as_view(), name='blog'),
+    path('blog-image/', BlogImageListAPIView.as_view(), name='blog_image'),
     # todo about
     path("about/", AboutListAPIView.as_view(), name="about-list"),
     path("faq/", FAQListAPIView.as_view(), name="faq-list"),
