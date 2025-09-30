@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     # todo  third party package
     'rest_framework',
     'drf_spectacular',
+    'django_filters',
     'django_ckeditor_5',
     'import_export',
 ]
