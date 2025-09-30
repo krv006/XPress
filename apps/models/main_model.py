@@ -3,10 +3,11 @@ from django.db.models.enums import TextChoices
 from django_ckeditor_5.fields import CKEditor5Field
 
 
+# todo Reliable Door-to-Door
 class MainPage(Model):
     title = CharField(max_length=500)
     description = CKEditor5Field()
-    content_us = CharField(max_length=100, help_text='Misol uchun: (929) 566-5040')
+    contact_us = CharField(max_length=100, help_text='Misol uchun: (929) 566-5040')
 
 
 class QuoteRequest(Model):
@@ -17,7 +18,7 @@ class QuoteRequest(Model):
     title = CharField(max_length=500)
     phone_number = CharField(max_length=100, help_text='Misol uchun: (123) 456-7891')
     by_checking = BooleanField(default=False)
-    message = TextField()
+    message = TextField(blank=True, null=True)
     contact_type = CharField(max_length=255, choices=Contacts.choices)
     created_at = DateTimeField(auto_now_add=True)
 
@@ -31,6 +32,12 @@ class ChooseXpress(Model):
     description = CKEditor5Field()
 
 
+# todo Simple Steps
+class SimpleSteps(Model):
+    title = CharField(max_length=500)
+    description = CKEditor5Field()
+
+
 # todo Why Choose Xpress Auto Transportation?
 class MakesUs(Model):
     class Questions(TextChoices):
@@ -39,14 +46,3 @@ class MakesUs(Model):
 
     description = CKEditor5Field()
     question = CharField(max_length=500, choices=Questions.choices)
-
-
-# todo About Us (HOME)
-class HomeAboutUs(Model):
-    description = CKEditor5Field()
-
-
-# todo Simple Steps
-class SimpleSteps(Model):
-    title = CharField(max_length=500)
-    description = CKEditor5Field()

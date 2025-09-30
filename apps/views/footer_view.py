@@ -4,13 +4,20 @@ from rest_framework.permissions import AllowAny
 
 from apps.models import Footer, Partners, Stats
 from apps.serializers import FooterModelSerializer, PartnerModelSerializer, \
-    StatsModelSerializer
+    StatsModelSerializer, ContactOptionModelSerializer
 
 
 @extend_schema(tags=["footer"])
 class FooterListCreate(ListCreateAPIView):
     queryset = Footer.objects.all()
     serializer_class = FooterModelSerializer
+    permission_classes = (AllowAny,)
+
+
+@extend_schema(tags=["Contact-Option"])
+class ContactOptionListCreate(ListCreateAPIView):
+    queryset = Footer.objects.all()
+    serializer_class = ContactOptionModelSerializer
     permission_classes = (AllowAny,)
 
 

@@ -18,5 +18,5 @@ class Stats(Model):
 
 
 class Partners(Model):
-    name = CharField(max_length=255, null=True, blank=True, help_text='Name of partner')
+    title = CharField(max_length=255, null=True, blank=True, help_text='Name of partner')
     image = ImageField(upload_to='partners/')
