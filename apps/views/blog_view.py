@@ -5,7 +5,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
 from apps.models import BlogPost
-from apps.serializers.blog_serializer import BlogModelSerializer, BlogDetailModelSerializer
+from apps.serializers import BlogModelSerializer, BlogDetailModelSerializer
 
 
 @extend_schema(tags=["blog"])

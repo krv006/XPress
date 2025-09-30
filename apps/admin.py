@@ -3,7 +3,7 @@ from django.contrib.admin import ModelAdmin
 from import_export.admin import ImportExportModelAdmin
 
 from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ
-from apps.models.main_model import MainPage, ProfessionalTeam
+from apps.models.main_model import MainPage, QuoteRequest
 from apps.resources import MainPageResource
 
 
@@ -12,8 +12,8 @@ class MainPageModelAdmin(ImportExportModelAdmin):
     resource_class = MainPageResource
 
 
-@admin.register(ProfessionalTeam)
-class ProfessionalTeamModelAdmin(ModelAdmin):
+@admin.register(QuoteRequest)
+class QuoteRequestModelAdmin(ModelAdmin):
     pass
 
 

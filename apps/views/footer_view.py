@@ -3,7 +3,7 @@ from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import AllowAny
 
 from apps.models import Footer, Partners, Stats
-from apps.serializers.footer_serializer import FooterModelSerializer, PartnerModelSerializer, \
+from apps.serializers import FooterModelSerializer, PartnerModelSerializer, \
     StatsModelSerializer
 
 

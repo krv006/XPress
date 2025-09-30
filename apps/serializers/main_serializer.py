@@ -1,7 +1,7 @@
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import MainPage,  ProfessionalTeam
+from apps.models import MainPage,  QuoteRequest
 
 
 class MainPageModelSerializer(ModelSerializer):
@@ -10,9 +10,9 @@ class MainPageModelSerializer(ModelSerializer):
         fields = '__all__'
 
 
-class ProfessionalTeamModelSerializer(ModelSerializer):
+class QuoteRequestModelSerializer(ModelSerializer):
     class Meta:
-        model = ProfessionalTeam
+        model = QuoteRequest
         fields = '__all__'
 
     def validate(self, attrs):
