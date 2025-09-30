@@ -1,7 +1,7 @@
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import MainPage, QuoteRequest
+from apps.models import MainPage, QuoteRequest, Overview
 from apps.models.main_model import ChooseXpress, SimpleSteps
 
 
@@ -15,6 +15,12 @@ class ChooseXpressModelSerializer(ModelSerializer):
     class Meta:
         model = ChooseXpress
         fields = 'id', 'title', 'description',
+
+
+class OverviewModelSerializer(ModelSerializer):
+    class Meta:
+        model = Overview
+        fields = 'id', 'description',
 
 
 class SimpleStepsModelSerializer(ModelSerializer):

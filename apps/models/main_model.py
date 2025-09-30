@@ -1,5 +1,6 @@
-from django.db.models import Model, CharField, BooleanField, TextField, DateTimeField
+from django.db.models import Model, CharField, BooleanField, TextField, DateTimeField, IntegerField
 from django.db.models.enums import TextChoices
+from django.db.models.fields import PositiveIntegerField
 from django_ckeditor_5.fields import CKEditor5Field
 
 
@@ -32,6 +33,11 @@ class ChooseXpress(Model):
     description = CKEditor5Field()
 
 
+# todo What Makes Us Stand Out?
+class Overview(Model):
+    description = CKEditor5Field()
+
+
 # todo Simple Steps
 class SimpleSteps(Model):
     title = CharField(max_length=500)
@@ -46,3 +52,13 @@ class MakesUs(Model):
 
     description = CKEditor5Field()
     question = CharField(max_length=500, choices=Questions.choices)
+
+
+
+class Stats(Model):
+    title = CharField(max_length=100, default="Cars Transported")
+    count = PositiveIntegerField(default=0)
+    updated_at = DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.title}: {self.count}+"

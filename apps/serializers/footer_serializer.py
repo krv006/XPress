@@ -24,4 +24,4 @@ class PartnerModelSerializer(ModelSerializer):
 class StatsModelSerializer(ModelSerializer):
     class Meta:
         model = Stats
-        fields = 'id', 'cars_transported', 'satisfied', 'carrier_network', 'star_reviews',
+        fields = 'id', 'title', 'count',

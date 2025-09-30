@@ -1,14 +1,15 @@
 from django.urls import path
 
-from apps.views import BlogDetailAPIView, BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleContactListAPIView, \
+from apps.views import BlogDetailAPIView, BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
-    ContactOptionListCreate, SimpleStepsListAPIView
+    ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView
 
 urlpatterns = [
     # todo main
     path('main-page/', MainPageListAPIView.as_view(), name='main_page'),
-    path('quotes-directly/', DirectlyContactListAPIView.as_view(), name='directly_quotes'),
-    path('quotes-simple/', SimpleContactListAPIView.as_view(), name='simple_quotes'),
+    path('quotes-simple/', SimpleListAPIView.as_view(), name='simple_quotes'),
+    path('choose-xpress/', ChooseXpressListAPIView.as_view(), name='choose_xpress'),
+    path('overview/', OverviewListAPIView.as_view(), name='overview'),
     path('simple-steps/', SimpleStepsListAPIView.as_view(), name='simple_steps'),
     # todo contact-option
     path('contact-option/', ContactOptionListCreate.as_view(), name='contact_option'),
@@ -22,4 +23,7 @@ urlpatterns = [
     # todo about
     path("about/", AboutListAPIView.as_view(), name="about-list"),
     path("faq/", FAQListAPIView.as_view(), name="faq-list"),
+    # todo contact
+    path('quotes-directly/', DirectlyContactListAPIView.as_view(), name='directly_quotes'),
+
 ]

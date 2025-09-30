@@ -1,4 +1,4 @@
-from django.db.models import Model, CharField, ImageField, IntegerField
+from django.db.models import Model, CharField, ImageField
 
 
 class Footer(Model):
@@ -9,12 +9,6 @@ class Footer(Model):
     facebook_link = CharField(max_length=200, help_text='Facebook link')
     youtube_link = CharField(max_length=200, help_text='Youtube link')
 
-
-class Stats(Model):
-    cars_transported = IntegerField()
-    satisfied = IntegerField()
-    carrier_network = IntegerField()
-    star_reviews = IntegerField()
 
 
 class Partners(Model):
