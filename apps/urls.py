@@ -2,7 +2,8 @@ from django.urls import path
 
 from apps.views import BlogDetailAPIView, BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
-    ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView
+    ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
+    FaqFrequentlyListAPIView
 
 urlpatterns = [
     # todo main
@@ -11,6 +12,7 @@ urlpatterns = [
     path('choose-xpress/', ChooseXpressListAPIView.as_view(), name='choose_xpress'),
     path('overview/', OverviewListAPIView.as_view(), name='overview'),
     path('simple-steps/', SimpleStepsListAPIView.as_view(), name='simple_steps'),
+    path('Frequently/', FaqFrequentlyListAPIView.as_view(), name='Frequently'),
     # todo contact-option
     path('contact-option/', ContactOptionListCreate.as_view(), name='contact_option'),
     # todo footer

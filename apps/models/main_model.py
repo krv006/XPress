@@ -1,4 +1,4 @@
-from django.db.models import Model, CharField, BooleanField, TextField, DateTimeField, IntegerField
+from django.db.models import Model, CharField, BooleanField, TextField, DateTimeField
 from django.db.models.enums import TextChoices
 from django.db.models.fields import PositiveIntegerField
 from django_ckeditor_5.fields import CKEditor5Field
@@ -42,17 +42,6 @@ class Overview(Model):
 class SimpleSteps(Model):
     title = CharField(max_length=500)
     description = CKEditor5Field()
-
-
-# todo Why Choose Xpress Auto Transportation?
-class MakesUs(Model):
-    class Questions(TextChoices):
-        MAKES = 'makes', 'Makes'
-        OurAuto = 'our_auto', 'Our_Auto'
-
-    description = CKEditor5Field()
-    question = CharField(max_length=500, choices=Questions.choices)
-
 
 
 class Stats(Model):

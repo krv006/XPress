@@ -1,7 +1,7 @@
 from rest_framework.exceptions import ValidationError
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import MainPage, QuoteRequest, Overview
+from apps.models import MainPage, QuoteRequest, Overview, Stats
 from apps.models.main_model import ChooseXpress, SimpleSteps
 
 
@@ -28,6 +28,10 @@ class SimpleStepsModelSerializer(ModelSerializer):
         model = SimpleSteps
         fields = 'id', 'title', 'description',
 
+class StatsModelSerializer(ModelSerializer):
+    class Meta:
+        model = Stats
+        fields = 'id', 'title', 'count',
 
 class DirectlyContactSerializer(ModelSerializer):
     class Meta:
@@ -64,3 +68,5 @@ class SimpleContactSerializer(ModelSerializer):
         if attrs.get('by_checking') is False:
             raise ValidationError("Tasdiqlanmagan: submit qilish mumkin emas!")
         return attrs
+
+

@@ -12,4 +12,4 @@ class AboutModelSerializer(ModelSerializer):
 class FAQModelSerializer(ModelSerializer):
     class Meta:
         model = FAQ
-        fields = ('id', 'title', 'description')
+        fields = 'id', 'title', 'description', 'category',

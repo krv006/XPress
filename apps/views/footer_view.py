@@ -28,8 +28,4 @@ class PartnerListCreate(ListCreateAPIView):
     permission_classes = (AllowAny,)
 
 
-@extend_schema(tags=["footer"])
-class StatsListCreate(ListCreateAPIView):
-    queryset = Stats.objects.all()
-    serializer_class = StatsModelSerializer
-    permission_classes = (AllowAny,)
+

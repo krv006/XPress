@@ -21,7 +21,4 @@ class PartnerModelSerializer(ModelSerializer):
         fields = 'id', 'title', 'image',
 
 
-class StatsModelSerializer(ModelSerializer):
-    class Meta:
-        model = Stats
-        fields = 'id', 'title', 'count',
+
