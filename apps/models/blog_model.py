@@ -31,7 +31,7 @@ class Category(Model):
         ordering = ["-published_at"]
 
     def __str__(self):
-        return self.title
+        return f'{self.title} {self.views}'
 
     def save(self, *args, **kwargs):
         if not self.slug:

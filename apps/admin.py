@@ -17,6 +17,9 @@ class BlogImageInline(TabularInline):
 class MainPageModelAdmin(ExportMixin, ModelAdmin):
     resource_class = MainPageResource
     list_display = ('id', 'title', 'description')
+    list_display_links = ("id", "title")
+    search_fields = ("title", "description", "contact_us")
+    ordering = ("id",)
 
 
 @admin.register(ChooseXpress)
@@ -26,12 +29,20 @@ class ChooseXpressModelAdmin(ModelAdmin):
 
 @admin.register(QuoteRequest)
 class QuoteRequestModelAdmin(ModelAdmin):
-    pass
+    list_display = ("id", "title", "phone_number", "contact_type", "created_at",)
+    list_display_links = ("id", "title")
+    list_filter = ("contact_type", "by_checking")
+    search_fields = ("title", "phone_number")
+    ordering = ("-created_at",)
+    date_hierarchy = "created_at"
+    list_per_page = 15
 
 
 @admin.register(Footer)
 class FooterModelAdmin(ModelAdmin):
-    pass
+    list_display = ('id', 'phone_number', 'address', 'gmail_link')
+    list_display_links = ("id", "phone_number")
+    search_fields = ("phone_number", "address")
 
 
 @admin.register(Stats)
@@ -41,7 +52,7 @@ class StatsModelAdmin(ModelAdmin):
 
 @admin.register(Partners)
 class PartnersModelAdmin(ExportMixin, ModelAdmin):
-    pass
+    list_display = ('id', 'title')
 
 
 @admin.register(About)
@@ -51,18 +62,34 @@ class AboutModelAdmin(ModelAdmin):
 
 @admin.register(FAQ)
 class FAQModelAdmin(ModelAdmin):
-    pass
+    list_display = ("id", "title", "category")
+    list_display_links = ("id", "title")
+    list_editable = ("category",)
+    list_filter = ("category",)
+    search_fields = ("title", "description")
+    ordering = ("title",)
+    list_per_page = 15
 
 
 @admin.register(BlogPost)
 class BlogPostAdmin(ExportMixin, ModelAdmin):
     inlines = [BlogImageInline]
-    list_display = ('id', 'category', 'slug', 'published_at')
-    prepopulated_fields = {"slug": ("category",)}  # slug avtomatik
+    list_display = ('id', 'category', 'slug', 'published_at', 'views')
+    list_filter = ('category', 'published_at')
+    search_fields = ('category__title', 'slug')
+    exclude = ('slug',)
+    autocomplete_fields = ('category',)
+    list_select_related = ("category",)
+    list_per_page = 15
+    save_on_top = True
 
 
 @admin.register(Category)
 class CategoryAdmin(ExportMixin, ModelAdmin):
+    list_display = ('title', 'views', 'published_at')
+    search_fields = ('title',)
+    list_filter = ("published_at",)
+    ordering = ('title', '-published_at',)
     exclude = 'slug',
 
 
