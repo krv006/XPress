@@ -3,21 +3,21 @@ from django.urls import path
 from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
-    FaqFrequentlyListAPIView, CategoryListAPIView, BlogImageListAPIView
+    FaqFrequentlyListAPIView, CategoryListAPIView, BlogImageListAPIView, ShippingPriceAPIView
 
 urlpatterns = [
     # todo main
     path('main-page/', MainPageListAPIView.as_view(), name='main_page'),
-    path('quotes-simple/', SimpleListAPIView.as_view(), name='simple_quotes'),
-    path('choose-xpress/', ChooseXpressListAPIView.as_view(), name='choose_xpress'),
+    path('quotes/simple/', SimpleListAPIView.as_view(), name='simple_quotes'),
+    path('choose/xpress/', ChooseXpressListAPIView.as_view(), name='choose_xpress'),
     path('overview/', OverviewListAPIView.as_view(), name='overview'),
-    path('simple-steps/', SimpleStepsListAPIView.as_view(), name='simple_steps'),
+    path('simple/steps/', SimpleStepsListAPIView.as_view(), name='simple_steps'),
     path('Frequently/', FaqFrequentlyListAPIView.as_view(), name='Frequently'),
     # todo contact-option
     path('contact-option/', ContactOptionListCreate.as_view(), name='contact_option'),
     # todo footer
     path('footer/', FooterListCreate.as_view(), name='footer'),
-    path('footer-simple/', StatsListCreate.as_view(), name='footer_simple'),
+    path('footer/simple/', StatsListCreate.as_view(), name='footer_simple'),
     path('partners/', PartnerListCreate.as_view(), name='partners'),
     # todo blog
     path('category/', CategoryListAPIView.as_view(), name='category'),
@@ -27,6 +27,8 @@ urlpatterns = [
     path("about/", AboutListAPIView.as_view(), name="about-list"),
     path("faq/", FAQListAPIView.as_view(), name="faq-list"),
     # todo contact
-    path('quotes-directly/', DirectlyContactListAPIView.as_view(), name='directly_quotes'),
+    path('quotes/directly/', DirectlyContactListAPIView.as_view(), name='directly_quotes'),
+    # todo calculator integrations
+    path('shipping/price/', ShippingPriceAPIView.as_view(), name='shipping-price'),
 
 ]
