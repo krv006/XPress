@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin, TabularInline
 from import_export.admin import ExportMixin
 
-from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, BlogImage, Category
+from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, BlogImage, Category, ReviewBreakdown, \
+    ReviewSource
 from apps.models.main_model import MainPage, QuoteRequest, ChooseXpress
 from apps.resources import MainPageResource
 
@@ -96,3 +97,28 @@ class CategoryAdmin(ExportMixin, ModelAdmin):
 @admin.register(BlogImage)
 class BlogImageAdmin(ModelAdmin):
     list_display = ('id', 'post', 'image')
+
+
+class ReviewBreakdownInline(TabularInline):
+    model = ReviewBreakdown
+    extra = 0  # qo'shimcha bo'sh qator qo'ymasin
+    min_num = 0
+    fields = ("stars", "count", "percentage")
+    ordering = ("-stars",)  # 5 → 1 tartibda ko‘rsatish
+
+
+@admin.register(ReviewSource)
+class ReviewSourceAdmin(ModelAdmin):
+    list_display = ("name", "average_rating", "total_reviews")
+    search_fields = ("name",)
+    list_per_page = 20
+    inlines = (ReviewBreakdownInline,)
+
+
+@admin.register(ReviewBreakdown)
+class ReviewBreakdownAdmin(ModelAdmin):
+    list_display = ("source", "stars", "count", "percentage")
+    list_filter = ("source", "stars")
+    search_fields = ("source__name",)
+    ordering = ("source", "-stars")
+    list_per_page = 50

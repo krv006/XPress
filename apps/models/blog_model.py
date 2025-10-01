@@ -98,7 +98,7 @@ class ReviewBreakdown(Model):
     source = ForeignKey(ReviewSource, on_delete=CASCADE, related_name="breakdowns")
     stars = PositiveSmallIntegerField(help_text="1–5")
     percentage = FloatField(help_text="100.0, 86.0, 12.0")
-    count = PositiveIntegerField(default=0, help_text="soni (14, 49, 32)")
+    count = PositiveIntegerField(default=0, help_text="Costumers soni (14, 49, 32)")
 
     def __str__(self):
         return f"{self.stars} stars - {self.percentage}%"
