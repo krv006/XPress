@@ -1,5 +1,5 @@
 from django.db.models import Model, ImageField, CharField, DateTimeField, PositiveIntegerField, SlugField, ForeignKey, \
-    PROTECT, CASCADE
+    PROTECT, CASCADE, FloatField, PositiveSmallIntegerField
 from django.db.models.fields import TextField
 from django.db.models.indexes import Index
 from django.utils import timezone
@@ -83,3 +83,22 @@ class BlogPost(Model):
 class BlogImage(Model):
     post = ForeignKey('apps.BlogPost', CASCADE, related_name="images")
     image = ImageField(upload_to='blog/image/')
+
+
+class ReviewSource(Model):
+    name = CharField(max_length=100, help_text="Transport Reviews, Trustpilot, BBB")
+    average_rating = FloatField(help_text="5.0, 4.2, 4.28")
+    total_reviews = PositiveIntegerField(help_text="14, 49, 32")
+
+    def __str__(self):
+        return f"{self.name} ({self.average_rating} / 5)"
+
+
+class ReviewBreakdown(Model):
+    source = ForeignKey(ReviewSource, on_delete=CASCADE, related_name="breakdowns")
+    stars = PositiveSmallIntegerField(help_text="1–5")
+    percentage = FloatField(help_text="100.0, 86.0, 12.0")
+    count = PositiveIntegerField(default=0, help_text="soni (14, 49, 32)")
+
+    def __str__(self):
+        return f"{self.stars} stars - {self.percentage}%"

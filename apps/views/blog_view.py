@@ -2,12 +2,37 @@ from django.db.models import F
 from django_filters.rest_framework import DjangoFilterBackend
 from drf_spectacular.utils import extend_schema
 from rest_framework.filters import SearchFilter
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.permissions import AllowAny
 
 from apps.filters import BlogPostFilter
-from apps.models import BlogPost, Category, BlogImage
-from apps.serializers import BlogModelSerializer, CategoryModelSerializer, BlogImageModelSerializer
+from apps.models import BlogPost, Category, BlogImage, ReviewBreakdown, ReviewSource
+from apps.serializers import BlogModelSerializer, CategoryModelSerializer, BlogImageModelSerializer, \
+    ReviewBreakdownSerializer, ReviewSourceSerializer
+
+
+@extend_schema(tags=["stars"])
+class ReviewSourceList(ListAPIView):
+    queryset = ReviewSource.objects.all().prefetch_related("breakdowns")
+    serializer_class = ReviewSourceSerializer
+
+
+@extend_schema(tags=["stars"])
+class ReviewSourceDetail(RetrieveAPIView):
+    queryset = ReviewSource.objects.all().prefetch_related("breakdowns")
+    serializer_class = ReviewSourceSerializer
+
+
+@extend_schema(tags=["stars"])
+class ReviewBreakdownList(ListAPIView):
+    serializer_class = ReviewBreakdownSerializer
+
+    def get_queryset(self):
+        qs = ReviewBreakdown.objects.select_related("source").all()
+        source_id = self.request.query_params.get("source")
+        if source_id:
+            qs = qs.filter(source_id=source_id)
+        return qs
 
 
 @extend_schema(tags=["blog"])

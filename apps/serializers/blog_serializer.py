@@ -1,7 +1,7 @@
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import BlogPost, Category, BlogImage
+from apps.models import BlogPost, Category, BlogImage, ReviewSource, ReviewBreakdown
 
 
 class CategoryModelSerializer(ModelSerializer):
@@ -50,3 +50,17 @@ class BlogModelSerializer(ModelSerializer):
 
     def get_published_date(self, obj):
         return obj.published_at.strftime('%B %d %Y') if obj.published_at else None
+
+
+class ReviewBreakdownSerializer(ModelSerializer):
+    class Meta:
+        model = ReviewBreakdown
+        fields = ("id", "source", "stars", "percentage", "count")
+
+
+class ReviewSourceSerializer(ModelSerializer):
+    breakdowns = ReviewBreakdownSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = ReviewSource
+        fields = ("id", "name", "average_rating", "total_reviews", "breakdowns")

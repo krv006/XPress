@@ -3,7 +3,8 @@ from django.urls import path
 from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
-    FaqFrequentlyListAPIView, CategoryListAPIView, BlogImageListAPIView, ShippingPriceAPIView
+    FaqFrequentlyListAPIView, CategoryListAPIView, BlogImageListAPIView, ShippingPriceAPIView, ReviewSourceList, \
+    ReviewSourceDetail, ReviewBreakdownList
 
 urlpatterns = [
     # todo main
@@ -29,6 +30,10 @@ urlpatterns = [
     # todo contact
     path('quotes/directly/', DirectlyContactListAPIView.as_view(), name='directly_quotes'),
     # todo calculator integrations
-    path('shipping/price/', ShippingPriceAPIView.as_view(), name='shipping-price'),
+    path('shipping/price/', ShippingPriceAPIView.as_view(), name='shipping_price'),
+    # todo stars
+    path("reviews/sources/", ReviewSourceList.as_view(), name="review_source_list"),
+    path("reviews/sources/<int:pk>/", ReviewSourceDetail.as_view(), name="review_source_detail"),
+    path("reviews/breakdowns/", ReviewBreakdownList.as_view(), name="review_breakdown_list"),
 
 ]
