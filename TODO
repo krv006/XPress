@@ -22,23 +22,9 @@ blog ga yozgan nima narsa yozgan bosam shunde copy pass qlamiz, slug da aloxida 
 
 TASK
 Blog di togirlash done
+About ga image qoshish done
+Main AboutUs qilish model done
+
 Stars di togirlash
 Slug qilish blog ga oxshagan
 Seo ni qilish
-About ga image qoshish
-Main AboutUs qilish model da
-
-
-
-    # faq di 1 ta qib qoyish kere
-    """
-    BLOGPOST
-    title
-    image
-    description
-    category da chiqib turishi uchun image
-    body qism boladi kein ckditor
-    link
-    STARS
-    1 talik qilamiz
-    """

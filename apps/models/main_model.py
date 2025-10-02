@@ -1,4 +1,4 @@
-from django.db.models import Model, CharField, BooleanField, TextField, DateTimeField
+from django.db.models import Model, CharField, BooleanField, TextField, DateTimeField, ImageField
 from django.db.models.enums import TextChoices
 from django.db.models.fields import PositiveIntegerField
 from django_ckeditor_5.fields import CKEditor5Field
@@ -55,4 +55,5 @@ class Stats(Model):
 
 class MainAbout(Model):
     title = CharField(max_length=500)
+    image = ImageField(upload_to='main_about/images/')
     description = CKEditor5Field()

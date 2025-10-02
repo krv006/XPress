@@ -57,10 +57,8 @@ class AboutModelAdmin(ModelAdmin):
 
 @admin.register(FAQ)
 class FAQModelAdmin(ModelAdmin):
-    list_display = ("id", "title", "category")
+    list_display = ("id", "title")
     list_display_links = ("id", "title")
-    list_editable = ("category",)
-    list_filter = ("category",)
     search_fields = ("title", "description")
     ordering = ("title",)
     list_per_page = 15

@@ -1,8 +1,6 @@
-from django_filters.rest_framework import DjangoFilterBackend
 from drf_spectacular.utils import extend_schema
 from rest_framework.generics import ListAPIView
 
-from apps.filters import FAQFilter
 from apps.models import About, FAQ
 from apps.serializers import AboutModelSerializer, FAQModelSerializer
 
@@ -15,7 +13,5 @@ class AboutListAPIView(ListAPIView):
 
 @extend_schema(tags=["about"])
 class FAQListAPIView(ListAPIView):
-    queryset = FAQ.objects.filter(category=FAQ.Choose.FAQ)
+    queryset = FAQ.objects.all()
     serializer_class = FAQModelSerializer
-    filter_backends = [DjangoFilterBackend]
-    filterset_class = FAQFilter

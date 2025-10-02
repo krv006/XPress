@@ -5,7 +5,6 @@ from rest_framework.filters import SearchFilter
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.permissions import AllowAny
 
-from apps.filters import BlogPostFilter
 from apps.models import BlogPost, ReviewBreakdown, ReviewSource
 from apps.serializers import BlogModelSerializer, \
     ReviewBreakdownSerializer, ReviewSourceSerializer
@@ -40,7 +39,6 @@ class BlogListAPIView(ListAPIView):
     queryset = BlogPost.objects.all()
     serializer_class = BlogModelSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_class = BlogPostFilter
     search_fields = 'title',
     permission_classes = (AllowAny,)
 

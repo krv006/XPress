@@ -20,7 +20,7 @@ class ChooseXpressModelSerializer(ModelSerializer):
 class MainAboutModelSerializer(ModelSerializer):
     class Meta:
         model = MainAbout
-        fields = 'id', 'title', 'description',
+        fields = 'id', 'title', 'description', 'image',
 
 
 class OverviewModelSerializer(ModelSerializer):

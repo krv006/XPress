@@ -3,7 +3,7 @@ from django.urls import path
 from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
-    FaqFrequentlyListAPIView, ShippingPriceAPIView, ReviewSourceList, \
+     ShippingPriceAPIView, ReviewSourceList, \
     ReviewSourceDetail, ReviewBreakdownList, TestShippingPriceAPIView, OrderStep1CreateAPIView, OrderStep2UpdateAPIView, \
     MainAboutListAPIView
 
@@ -14,7 +14,6 @@ urlpatterns = [
     path('choose/xpress/', ChooseXpressListAPIView.as_view(), name='choose_xpress'),
     path('overview/', OverviewListAPIView.as_view(), name='overview'),
     path('simple/steps/', SimpleStepsListAPIView.as_view(), name='simple_steps'),
-    path('frequently/', FaqFrequentlyListAPIView.as_view(), name='Frequently'),
     path('main/about/', MainAboutListAPIView.as_view(), name='main_about'),
     # todo contact-option
     path('contact-option/', ContactOptionListCreate.as_view(), name='contact_option'),
