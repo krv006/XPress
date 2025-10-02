@@ -6,8 +6,8 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.permissions import AllowAny
 
 from apps.filters import BlogPostFilter
-from apps.models import BlogPost, Category, BlogImage, ReviewBreakdown, ReviewSource
-from apps.serializers import BlogModelSerializer, CategoryModelSerializer, BlogImageModelSerializer, \
+from apps.models import BlogPost, ReviewBreakdown, ReviewSource
+from apps.serializers import BlogModelSerializer, \
     ReviewBreakdownSerializer, ReviewSourceSerializer
 
 
@@ -33,27 +33,6 @@ class ReviewBreakdownList(ListAPIView):
         if source_id:
             qs = qs.filter(source_id=source_id)
         return qs
-
-
-@extend_schema(tags=["blog"])
-class BlogImageListAPIView(ListAPIView):
-    queryset = BlogImage.objects.all()
-    serializer_class = BlogImageModelSerializer
-    permission_classes = (AllowAny,)
-
-
-@extend_schema(tags=["blog"])
-class CategoryListAPIView(ListAPIView):
-    queryset = Category.objects.all()
-    serializer_class = CategoryModelSerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter]
-    search_fields = 'title',
-    permission_classes = (AllowAny,)
-
-    def get_queryset(self):
-        queryset = Category.objects.order_by('-id')
-        Category.objects.all().update(views=F('views') + 1)
-        return queryset
 
 
 @extend_schema(tags=["blog"])

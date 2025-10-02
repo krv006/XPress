@@ -2,16 +2,10 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin, TabularInline
 from import_export.admin import ExportMixin
 
-from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, BlogImage, Category, ReviewBreakdown, \
-    ReviewSource
+from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, ReviewBreakdown, \
+    ReviewSource, Overview
 from apps.models.main_model import MainPage, QuoteRequest, ChooseXpress
 from apps.resources import MainPageResource
-
-
-class BlogImageInline(TabularInline):
-    model = BlogImage
-    extra = 3
-    max_num = 15
 
 
 @admin.register(MainPage)
@@ -74,29 +68,12 @@ class FAQModelAdmin(ModelAdmin):
 
 @admin.register(BlogPost)
 class BlogPostAdmin(ExportMixin, ModelAdmin):
-    inlines = [BlogImageInline]
-    list_display = ('id', 'category', 'slug', 'published_at', 'views')
-    list_filter = ('category', 'published_at')
-    search_fields = ('category__title', 'slug')
-    exclude = ('slug',)
-    autocomplete_fields = ('category',)
-    list_select_related = ("category",)
+    list_display = ('id','title', 'views')
+    search_fields = ('title',)
+    autocomplete_fields = ()
     list_per_page = 15
     save_on_top = True
 
-
-@admin.register(Category)
-class CategoryAdmin(ExportMixin, ModelAdmin):
-    list_display = ('title', 'views', 'published_at')
-    search_fields = ('title',)
-    list_filter = ("published_at",)
-    ordering = ('title', '-published_at',)
-    exclude = 'slug',
-
-
-@admin.register(BlogImage)
-class BlogImageAdmin(ModelAdmin):
-    list_display = ('id', 'post', 'image')
 
 
 class ReviewBreakdownInline(TabularInline):
@@ -122,3 +99,6 @@ class ReviewBreakdownAdmin(ModelAdmin):
     search_fields = ("source__name",)
     ordering = ("source", "-stars")
     list_per_page = 50
+
+
+admin.site.register(Overview)

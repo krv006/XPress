@@ -2,31 +2,43 @@
 
 api larni yashirish
 
-
 Blog ni korsatish kere qande bolishini
-
 yokida 2 ga bolish Category, Product sifatda
-
-
 FAQ xam 2 ta ekan u uchun xam aloxida qilish keremi
-
-
 Partners ga name
-
-
 admindan stars
-
-
-
 Blog ga category product struktura qilish
-
-
-
 Category ga tegshlilani chiqazsh kk
+https://nexusautotransport.com/ mana shunda
 
-https://nexusautotransport.com/
-
-mana shunda
 https://chatgpt.com/c/68dbe849-d85c-8331-868a-f68e36aeacf2
-
 rasul aka gpt
+
+page qosha oladigan link bilan
+seo ni qoshish manytone boladi xar bir page uchun
+extra pages
+blog ga yozgan nima narsa yozgan bosam shunde copy pass qlamiz, slug da aloxida bob tursin
+
+
+TASK
+Blog di togirlash done
+Stars di togirlash
+Slug qilish blog ga oxshagan
+Seo ni qilish
+About ga image qoshish
+Main AboutUs qilish model da
+
+
+
+    # faq di 1 ta qib qoyish kere
+    """
+    BLOGPOST
+    title
+    image
+    description
+    category da chiqib turishi uchun image
+    body qism boladi kein ckditor
+    link
+    STARS
+    1 talik qilamiz
+    """

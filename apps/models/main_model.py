@@ -18,7 +18,7 @@ class QuoteRequest(Model):
 
     title = CharField(max_length=500)
     phone_number = CharField(max_length=100, help_text='Misol uchun: (123) 456-7891')
-    by_checking = BooleanField(default=False)
+    by_checking = BooleanField(default=False)  # remove
     message = TextField(blank=True, null=True)
     contact_type = CharField(max_length=255, choices=Contacts.choices)
     created_at = DateTimeField(auto_now_add=True)
@@ -51,3 +51,8 @@ class Stats(Model):
 
     def __str__(self):
         return f"{self.title}: {self.count}+"
+
+
+class MainAbout(Model):
+    title = CharField(max_length=500)
+    description = CKEditor5Field()
