@@ -1,0 +1,412 @@
+{
+  "vehicle_makes": [
+    {
+      "value": "AM General"
+    },
+    {
+      "value": "ASC Incorporated"
+    },
+    {
+      "value": "Acura"
+    },
+    {
+      "value": "Alfa Romeo"
+    },
+    {
+      "value": "American Motors Corporation"
+    },
+    {
+      "value": "Aston Martin"
+    },
+    {
+      "value": "Audi"
+    },
+    {
+      "value": "Aurora Cars Ltd"
+    },
+    {
+      "value": "Autokraft Limited"
+    },
+    {
+      "value": "Avanti Motor Corporation"
+    },
+    {
+      "value": "Azure Dynamics"
+    },
+    {
+      "value": "BMW"
+    },
+    {
+      "value": "BMW Alpina"
+    },
+    {
+      "value": "BYD"
+    },
+    {
+      "value": "Bentley"
+    },
+    {
+      "value": "Bertone"
+    },
+    {
+      "value": "Bill Dovell Motor Car Company"
+    },
+    {
+      "value": "Bitter Gmbh and Co. Kg"
+    },
+    {
+      "value": "Bugatti"
+    },
+    {
+      "value": "Buick"
+    },
+    {
+      "value": "CCC Engineering"
+    },
+    {
+      "value": "CODA Automotive"
+    },
+    {
+      "value": "CX Automotive"
+    },
+    {
+      "value": "Cadillac"
+    },
+    {
+      "value": "Chevrolet"
+    },
+    {
+      "value": "Chrysler"
+    },
+    {
+      "value": "Consulier Industries Inc"
+    },
+    {
+      "value": "Dabryan Coach Builders Inc"
+    },
+    {
+      "value": "Dacia"
+    },
+    {
+      "value": "Daewoo"
+    },
+    {
+      "value": "Daihatsu"
+    },
+    {
+      "value": "Dodge"
+    },
+    {
+      "value": "E. P. Dutton, Inc."
+    },
+    {
+      "value": "Eagle"
+    },
+    {
+      "value": "Environmental Rsch and Devp Corp"
+    },
+    {
+      "value": "Evans Automobiles"
+    },
+    {
+      "value": "Excalibur Autos"
+    },
+    {
+      "value": "Federal Coach"
+    },
+    {
+      "value": "Ferrari"
+    },
+    {
+      "value": "Fiat"
+    },
+    {
+      "value": "Fisker"
+    },
+    {
+      "value": "Ford"
+    },
+    {
+      "value": "GMC"
+    },
+    {
+      "value": "General Motors"
+    },
+    {
+      "value": "Genesis"
+    },
+    {
+      "value": "Geo"
+    },
+    {
+      "value": "Goldacre"
+    },
+    {
+      "value": "Grumman Allied Industries"
+    },
+    {
+      "value": "Grumman Olson"
+    },
+    {
+      "value": "Honda"
+    },
+    {
+      "value": "Hummer"
+    },
+    {
+      "value": "Hyundai"
+    },
+    {
+      "value": "Import Foreign Auto Sales Inc"
+    },
+    {
+      "value": "Import Trade Services"
+    },
+    {
+      "value": "Infiniti"
+    },
+    {
+      "value": "Isis Imports Ltd"
+    },
+    {
+      "value": "Isuzu"
+    },
+    {
+      "value": "J.K. Motors"
+    },
+    {
+      "value": "JBA Motorcars, Inc."
+    },
+    {
+      "value": "Jaguar"
+    },
+    {
+      "value": "Jeep"
+    },
+    {
+      "value": "Karma"
+    },
+    {
+      "value": "Kenyon Corporation Of America"
+    },
+    {
+      "value": "Kia"
+    },
+    {
+      "value": "Koenigsegg"
+    },
+    {
+      "value": "Laforza Automobile Inc"
+    },
+    {
+      "value": "Lambda Control Systems"
+    },
+    {
+      "value": "Lamborghini"
+    },
+    {
+      "value": "Land Rover"
+    },
+    {
+      "value": "Lexus"
+    },
+    {
+      "value": "Lincoln"
+    },
+    {
+      "value": "London Coach Co Inc"
+    },
+    {
+      "value": "London Taxi"
+    },
+    {
+      "value": "Lotus"
+    },
+    {
+      "value": "MINI"
+    },
+    {
+      "value": "Mahindra"
+    },
+    {
+      "value": "Maserati"
+    },
+    {
+      "value": "Maybach"
+    },
+    {
+      "value": "Mazda"
+    },
+    {
+      "value": "McLaren Automotive"
+    },
+    {
+      "value": "Mcevoy Motors"
+    },
+    {
+      "value": "Mercedes-Benz"
+    },
+    {
+      "value": "Mercury"
+    },
+    {
+      "value": "Merkur"
+    },
+    {
+      "value": "Mitsubishi"
+    },
+    {
+      "value": "Mobility Ventures LLC"
+    },
+    {
+      "value": "Morgan"
+    },
+    {
+      "value": "Nissan"
+    },
+    {
+      "value": "Oldsmobile"
+    },
+    {
+      "value": "PAS Inc - GMC"
+    },
+    {
+      "value": "PAS, Inc"
+    },
+    {
+      "value": "Pagani"
+    },
+    {
+      "value": "Panos"
+    },
+    {
+      "value": "Panoz Auto-Development"
+    },
+    {
+      "value": "Panther Car Company Limited"
+    },
+    {
+      "value": "Peugeot"
+    },
+    {
+      "value": "Pininfarina"
+    },
+    {
+      "value": "Plymouth"
+    },
+    {
+      "value": "Pontiac"
+    },
+    {
+      "value": "Porsche"
+    },
+    {
+      "value": "Quantum Technologies"
+    },
+    {
+      "value": "Qvale"
+    },
+    {
+      "value": "RUF Automobile"
+    },
+    {
+      "value": "Ram"
+    },
+    {
+      "value": "Red Shift Ltd."
+    },
+    {
+      "value": "Renault"
+    },
+    {
+      "value": "Rolls-Royce"
+    },
+    {
+      "value": "Roush Performance"
+    },
+    {
+      "value": "Ruf Automobile Gmbh"
+    },
+    {
+      "value": "S and S Coach Company  E.p. Dutton"
+    },
+    {
+      "value": "SRT"
+    },
+    {
+      "value": "Saab"
+    },
+    {
+      "value": "Saleen"
+    },
+    {
+      "value": "Saleen Performance"
+    },
+    {
+      "value": "Saturn"
+    },
+    {
+      "value": "Scion"
+    },
+    {
+      "value": "Shelby"
+    },
+    {
+      "value": "Spyker"
+    },
+    {
+      "value": "Sterling"
+    },
+    {
+      "value": "Subaru"
+    },
+    {
+      "value": "Superior Coaches Div E.p. Dutton"
+    },
+    {
+      "value": "Suzuki"
+    },
+    {
+      "value": "TVR Engineering Ltd"
+    },
+    {
+      "value": "Tecstar, LP"
+    },
+    {
+      "value": "Tesla"
+    },
+    {
+      "value": "Texas Coach Company"
+    },
+    {
+      "value": "Toyota"
+    },
+    {
+      "value": "VPG"
+    },
+    {
+      "value": "Vector"
+    },
+    {
+      "value": "Vixen Motor Company"
+    },
+    {
+      "value": "Volga Associated Automobile"
+    },
+    {
+      "value": "Volkswagen"
+    },
+    {
+      "value": "Volvo"
+    },
+    {
+      "value": "Wallace Environmental"
+    },
+    {
+      "value": "Yugo"
+    },
+    {
+      "value": "smart"
+    }
+  ]
+}

@@ -3,7 +3,8 @@ from django.urls import path
 from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListCreateAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
-    OrderStep1CreateAPIView, MainAboutListAPIView, StarListAPIView
+    OrderStep1CreateAPIView, MainAboutListAPIView, StarListAPIView, VehicleMakeAPIView, VehicleYearAPIView, \
+    VehicleModelAPIView, ZipCodeAPIView
 
 urlpatterns = [
     # todo main
@@ -31,5 +32,11 @@ urlpatterns = [
 
     # todo stars
     path("stars/", StarListAPIView.as_view(), name="star_list"),
+
+    # todo apis
+    path("vehicle-makes/", VehicleMakeAPIView.as_view(), name="vehicle-makes"),
+    path("vehicle-models/", VehicleModelAPIView.as_view(), name="vehicle-models"),
+    path("vehicle-years/", VehicleYearAPIView.as_view(), name="vehicle-years"),
+    path("zip-codes/", ZipCodeAPIView.as_view(), name="zip-codes"),
 
 ]
