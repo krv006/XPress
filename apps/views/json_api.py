@@ -1,6 +1,6 @@
 from drf_spectacular.utils import extend_schema, OpenApiParameter
 
-from apps.views import JsonListAPIView
+from apps.views.json_base import JsonListAPIView
 
 pagination_params = [
     OpenApiParameter(name="page", description="Sahifa raqami", required=False, type=int),
