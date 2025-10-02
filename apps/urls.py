@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListAPIView, \
+from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListCreateAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
     OrderStep1CreateAPIView, MainAboutListAPIView, StarListAPIView
@@ -8,7 +8,7 @@ from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, Simple
 urlpatterns = [
     # todo main
     path('main-page/', MainPageListAPIView.as_view(), name='main_page'),
-    path('quotes/simple/', SimpleListAPIView.as_view(), name='simple_quotes'),
+    path('quotes/simple/', SimpleListCreateAPIView.as_view(), name='simple_quotes'),
     path('choose/xpress/', ChooseXpressListAPIView.as_view(), name='choose_xpress'),
     path('overview/', OverviewListAPIView.as_view(), name='overview'),
     path('steps/', SimpleStepsListAPIView.as_view(), name='simple_steps'),

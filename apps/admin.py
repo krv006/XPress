@@ -25,7 +25,7 @@ class ChooseXpressModelAdmin(ModelAdmin):
 class QuoteRequestModelAdmin(ModelAdmin):
     list_display = ("id", "title", "phone_number", "contact_type", "created_at",)
     list_display_links = ("id", "title")
-    list_filter = ("contact_type", "by_checking")
+    list_filter = ("contact_type",)
     search_fields = ("title", "phone_number")
     ordering = ("-created_at",)
     date_hierarchy = "created_at"

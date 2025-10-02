@@ -1,4 +1,4 @@
-from rest_framework.exceptions import ValidationError
+from rest_framework.fields import DateTimeField
 from rest_framework.serializers import ModelSerializer
 
 from apps.models import MainPage, QuoteRequest, Overview, Stats, MainAbout
@@ -42,37 +42,29 @@ class StatsModelSerializer(ModelSerializer):
 
 
 class DirectlyContactSerializer(ModelSerializer):
+    created_at = DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True)
+
     class Meta:
         model = QuoteRequest
         fields = [
             "id",
             "title",
             "phone_number",
-            "by_checking",
             "message",
             "contact_type",
             "created_at",
         ]
 
-    def validate(self, attrs):
-        if attrs.get('by_checking') is False:
-            raise ValidationError("Tasdiqlanmagan: submit qilish mumkin emas!")
-        return attrs
-
 
 class SimpleContactSerializer(ModelSerializer):
+    created_at = DateTimeField(format="%Y-%m-%d %H:%M:%S", read_only=True)
+
     class Meta:
         model = QuoteRequest
         fields = [
             "id",
             "title",
             "phone_number",
-            "by_checking",
             "contact_type",
             "created_at",
         ]
-
-    def validate(self, attrs):
-        if attrs.get('by_checking') is False:
-            raise ValidationError("Tasdiqlanmagan: submit qilish mumkin emas!")
-        return attrs
