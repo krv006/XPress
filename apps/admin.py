@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 from import_export.admin import ExportMixin
 
-from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, Overview, Star
+from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, Overview, Star, Seo, Page
 from apps.models.main_model import MainPage, QuoteRequest, ChooseXpress
 from apps.resources import MainPageResource
 
@@ -74,3 +74,5 @@ class BlogPostAdmin(ExportMixin, ModelAdmin):
 
 admin.site.register(Overview)
 admin.site.register(Star)
+admin.site.register(Seo)
+admin.site.register(Page)

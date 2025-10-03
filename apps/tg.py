@@ -4,7 +4,6 @@ TELEGRAM_TOKEN = "7652120897:AAH6Ameln9LCyANjrT8BUwH0IccJapWYh1E"
 CHAT_ID = -4913366579
 
 
-
 def send_to_telegram_order(order_data):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
 
@@ -13,7 +12,7 @@ def send_to_telegram_order(order_data):
         external_response = order_data.get("external_response", {})
 
         message = (
-            f"🆕 Yangi Order!\n\n"
+            f"🆕 New Order!\n\n"
             f"📦 Order ID: {order.get('id')}\n"
             f"📍 Pickup ZIP: {order.get('pickup_zip')}\n"
             f"📍 Dropoff ZIP: {order.get('dropoff_zip')}\n"
@@ -45,11 +44,12 @@ def send_to_telegram_order(order_data):
     except Exception as e:
         print("❌ Telegram xato:", e)
 
+
 def send_to_telegram_contact(quote_data, type_name="Quote Request"):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
 
     message = (
-        f"🆕 Yangi {type_name}!\n\n"
+        f"🆕 Contact request {type_name}!\n\n"
         f"📝 Title: {quote_data.get('title')}\n"
         f"📞 Phone: {quote_data.get('phone_number')}\n"
         f"📅 Created Date: {quote_data.get('created_at')}\n"
@@ -57,7 +57,6 @@ def send_to_telegram_contact(quote_data, type_name="Quote Request"):
 
     if quote_data.get("message"):
         message += f"💬 Message: {quote_data.get('message')}\n"
-
 
     payload = {
         "chat_id": CHAT_ID,
