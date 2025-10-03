@@ -1,5 +1,5 @@
 from django.db.models import Model, ImageField, CharField, DateTimeField, PositiveIntegerField, \
-    PositiveSmallIntegerField, DecimalField
+    PositiveSmallIntegerField, DecimalField, ForeignKey, CASCADE
 from django.db.models import URLField
 from django_ckeditor_5.fields import CKEditor5Field
 
@@ -13,6 +13,7 @@ class BlogPost(Model):
     views = PositiveIntegerField(
         default=0, help_text="Kategoriya necha marta ko‘rilganligini ko‘rsatadi.")
     created = DateTimeField(auto_now_add=True)
+    seo = ForeignKey('apps.Seo', CASCADE, related_name='blog_posts')
 
 
 class Star(Model):
