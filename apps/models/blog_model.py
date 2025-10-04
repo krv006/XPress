@@ -16,7 +16,7 @@ class BlogPost(Model):
     seo = ForeignKey('apps.Seo', CASCADE, related_name='blog_posts')
 
 
-class Star(Model):
+class Review(Model):
     title = CharField(max_length=500)
     costumers_rating = PositiveSmallIntegerField(help_text="14, 45, 150")
     average_rating = DecimalField(max_digits=3, decimal_places=1, help_text="O‘rtacha baho (masalan: 4.9)")

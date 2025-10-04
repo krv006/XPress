@@ -1,7 +1,7 @@
 from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
-from apps.models import BlogPost, Star
+from apps.models import BlogPost, Review
 
 
 class BlogModelSerializer(ModelSerializer):
@@ -16,8 +16,8 @@ class BlogModelSerializer(ModelSerializer):
         return obj.published_at.strftime('%B %d %Y') if obj.published_at else None
 
 
-class StarModelSerializer(ModelSerializer):
+class ReviewModelSerializer(ModelSerializer):
     class Meta:
-        model = Star
+        model = Review
         fields = '__all__'
 

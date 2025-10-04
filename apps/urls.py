@@ -3,7 +3,7 @@ from django.urls import path
 from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, SimpleListCreateAPIView, \
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
-    OrderStep1CreateAPIView, MainAboutListAPIView, StarListAPIView, VehicleMakeAPIView, VehicleYearAPIView, \
+    OrderStep1CreateAPIView, MainAboutListAPIView, ReviewListAPIView, VehicleMakeAPIView, VehicleYearAPIView, \
     VehicleModelAPIView, ZipCodeAPIView, PageListAPIView, SeoListAPIView
 
 urlpatterns = [
@@ -31,7 +31,7 @@ urlpatterns = [
     path("orders/", OrderStep1CreateAPIView.as_view(), name="order_step1"),
 
     # todo stars
-    path("stars/", StarListAPIView.as_view(), name="star_list"),
+    path("stars/", ReviewListAPIView.as_view(), name="star_list"),
 
     # todo Seo and Page
     path("seo/", PageListAPIView.as_view(), name="seo_list"),

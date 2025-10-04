@@ -5,14 +5,14 @@ from rest_framework.filters import SearchFilter
 from rest_framework.generics import ListAPIView
 from rest_framework.permissions import AllowAny
 
-from apps.models import BlogPost, Star
-from apps.serializers import BlogModelSerializer, StarModelSerializer
+from apps.models import BlogPost, Review
+from apps.serializers import BlogModelSerializer, ReviewModelSerializer
 
 
 @extend_schema(tags=["stars"])
-class StarListAPIView(ListAPIView):
-    queryset = Star.objects.all()
-    serializer_class = StarModelSerializer
+class ReviewListAPIView(ListAPIView):
+    queryset = Review.objects.all()
+    serializer_class = ReviewModelSerializer
 
 
 @extend_schema(tags=["blog"])

@@ -30,7 +30,8 @@ class VehicleYearAPIView(JsonListAPIView):
     filter_field = "value"
 
 
-@extend_schema(tags=["shipping"], parameters=pagination_params + filter_param("name"))
+@extend_schema(tags=["shipping"],
+               parameters=pagination_params + filter_param("name") + filter_param("city") + filter_param("state"))
 class ZipCodeAPIView(JsonListAPIView):
     filename = "zip_codes_full.json"
     filter_field = "name"
