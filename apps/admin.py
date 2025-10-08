@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 from import_export.admin import ExportMixin
 
-from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, Overview, Review, Seo, Page
+from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, Overview, Review, Seo, Page, Stories
 from apps.models.main_model import MainPage, QuoteRequest, ChooseXpress
 from apps.resources import MainPageResource
 
@@ -65,6 +65,15 @@ class FAQModelAdmin(ModelAdmin):
 
 @admin.register(BlogPost)
 class BlogPostAdmin(ExportMixin, ModelAdmin):
+    list_display = ('id', 'title', 'views')
+    search_fields = ('title',)
+    autocomplete_fields = ()
+    list_per_page = 15
+    save_on_top = True
+
+
+@admin.register(Stories)
+class StoriesAdmin(ExportMixin, ModelAdmin):
     list_display = ('id', 'title', 'views')
     search_fields = ('title',)
     autocomplete_fields = ()

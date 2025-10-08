@@ -25,3 +25,15 @@ class Review(Model):
     stars_3 = PositiveIntegerField(default=0)
     stars_2 = PositiveIntegerField(default=0)
     stars_1 = PositiveIntegerField(default=0)
+
+
+class Stories(Model):
+    title = CharField(max_length=500)
+    main_image = ImageField(upload_to="blog/main/", null=True, blank=True)
+    description = CKEditor5Field()
+    body = CKEditor5Field()
+    link = URLField(null=True, blank=True)
+    views = PositiveIntegerField(
+        default=0, help_text="Kategoriya necha marta ko‘rilganligini ko‘rsatadi.")
+    created = DateTimeField(auto_now_add=True)
+    seo = ForeignKey('apps.Seo', CASCADE, related_name='stories')

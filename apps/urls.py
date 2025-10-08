@@ -4,7 +4,7 @@ from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, Simple
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
     OrderStep1CreateAPIView, MainAboutListAPIView, ReviewListAPIView, VehicleMakeAPIView, VehicleYearAPIView, \
-    VehicleModelAPIView, ZipCodeAPIView, PageListAPIView, SeoListAPIView
+    VehicleModelAPIView, ZipCodeAPIView, PageListAPIView, SeoListAPIView, StoriesListAPIView
 
 urlpatterns = [
     # todo main
@@ -22,6 +22,7 @@ urlpatterns = [
     path('partners/', PartnerListCreate.as_view(), name='partners'),
     # todo blog
     path('blog/', BlogListAPIView.as_view(), name='blog'),
+    path('stories/', StoriesListAPIView.as_view(), name='stories'),
     # todo about
     path("about/", AboutListAPIView.as_view(), name="about-list"),
     path("faq/", FAQListAPIView.as_view(), name="faq-list"),

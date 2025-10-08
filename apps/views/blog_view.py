@@ -5,8 +5,8 @@ from rest_framework.filters import SearchFilter
 from rest_framework.generics import ListAPIView
 from rest_framework.permissions import AllowAny
 
-from apps.models import BlogPost, Review
-from apps.serializers import BlogModelSerializer, ReviewModelSerializer
+from apps.models import BlogPost, Review, Stories
+from apps.serializers import BlogModelSerializer, ReviewModelSerializer, StoriesModelSerializer
 
 
 @extend_schema(tags=["stars"])
@@ -26,6 +26,20 @@ class BlogListAPIView(ListAPIView):
     def get_queryset(self):
         queryset = BlogPost.objects.order_by('-id')
         BlogPost.objects.all().update(views=F('views') + 1)
+        return queryset
+
+
+@extend_schema(tags=["blog"])
+class StoriesListAPIView(ListAPIView):
+    queryset = Stories.objects.all()
+    serializer_class = StoriesModelSerializer
+    filter_backends = [DjangoFilterBackend, SearchFilter]
+    search_fields = 'title',
+    permission_classes = (AllowAny,)
+
+    def get_queryset(self):
+        queryset = Stories.objects.order_by('-id')
+        Stories.objects.all().update(views=F('views') + 1)
         return queryset
 
     # def retrieve(self, request, *args, **kwargs):
