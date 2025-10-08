@@ -7,7 +7,7 @@ from apps.serializers import FooterModelSerializer, PartnerModelSerializer, \
     ContactOptionModelSerializer
 
 
-@extend_schema(tags=["footer"])
+@extend_schema(tags=["settings"])
 class FooterListCreate(ListCreateAPIView):
     queryset = Footer.objects.all()
     serializer_class = FooterModelSerializer
@@ -21,7 +21,7 @@ class ContactOptionListCreate(ListCreateAPIView):
     permission_classes = (AllowAny,)
 
 
-@extend_schema(tags=["footer"])
+@extend_schema(tags=["settings"])
 class PartnerListCreate(ListCreateAPIView):
     queryset = Partners.objects.all()
     serializer_class = PartnerModelSerializer

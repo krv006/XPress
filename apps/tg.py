@@ -1,7 +1,12 @@
 import requests
 
-TELEGRAM_TOKEN = "7652120897:AAH6Ameln9LCyANjrT8BUwH0IccJapWYh1E"
-CHAT_ID = -4913366579
+from apps.models import TelegramConfig
+
+config = TelegramConfig.objects.first()
+
+
+TELEGRAM_TOKEN = str(config.bot_token).strip()  # "7652120897:AAH6Ameln9LCyANjrT8BUwH0IccJapWYh1E"
+CHAT_ID = str(config.chat_id).strip()  # -4913366579
 
 
 def send_to_telegram_order(order_data):

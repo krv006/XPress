@@ -37,3 +37,8 @@ class Stories(Model):
         default=0, help_text="Kategoriya necha marta ko‘rilganligini ko‘rsatadi.")
     created = DateTimeField(auto_now_add=True)
     seo = ForeignKey('apps.Seo', CASCADE, related_name='stories')
+
+
+class TelegramConfig(Model):
+    bot_token = CharField(max_length=200)
+    chat_id = CharField(max_length=100)

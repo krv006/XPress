@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 from import_export.admin import ExportMixin
 
-from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, Overview, Review, Seo, Page, Stories
+from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, Overview, Review, Seo, Page, Stories, \
+    TelegramConfig
 from apps.models.main_model import MainPage, QuoteRequest, ChooseXpress
 from apps.resources import MainPageResource
 
@@ -79,6 +80,11 @@ class StoriesAdmin(ExportMixin, ModelAdmin):
     autocomplete_fields = ()
     list_per_page = 15
     save_on_top = True
+
+
+@admin.register(TelegramConfig)
+class TelegramConfigAdmin(admin.ModelAdmin):
+    pass
 
 
 admin.site.register(Overview)
