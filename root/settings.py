@@ -1,11 +1,18 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
 from root.drf_settings import *
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-5eylkkg$cwn=$1v9q)bkupzx84djq=l6d*%y8#r#btc789pms^'
+env_path = os.path.join(BASE_DIR, ".env")
 
-DEBUG = True
+load_dotenv(dotenv_path=env_path)
+
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG", "False").strip().lower() in ("true", "1", "yes", "y", "t")
+
 
 ALLOWED_HOSTS = ['*']
 
@@ -58,11 +65,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'root.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": os.getenv("DB_ENGINE"),
+        "NAME": os.getenv("DB_NAME"),
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("DB_PASSWORD"),
+        "HOST": os.getenv("DB_HOST"),
+        "PORT": os.getenv("DB_PORT"),
     }
 }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

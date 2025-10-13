@@ -65,3 +65,6 @@ TELEGRAM_TOKEN = "7652120897:AAH6Ameln9LCyANjrT8BUwH0IccJapWYh1E"
 CHAT_ID = -4913366579
 
 + setting api
+
+docker run --name postgres  -e POSTGRES_USER=postgres  -e POSTGRES_PASSWORD=1 -e POSTGRES_DB=xpress   -p 5433:5432   -v postgres_data:/var/lib/postgresql/data  -d postgres:15
+
