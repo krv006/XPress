@@ -1,5 +1,6 @@
 from django.core.validators import MinLengthValidator, RegexValidator
-from django.db.models import Model, CharField, TextField, SlugField, ImageField, DateTimeField
+from django.db.models import Model, CharField, TextField, SlugField, ImageField, DateTimeField, \
+    PositiveSmallIntegerField, DateField, DecimalField, PositiveBigIntegerField
 from django_ckeditor_5.fields import CKEditor5Field
 
 slug_validator = RegexValidator(
@@ -39,3 +40,27 @@ class Page(Model):
 
     def __str__(self):
         return self.title
+
+
+class CustomerReview(Model):
+    title = CharField(max_length=500)
+    from_location = CharField(max_length=100)
+    to_location = CharField(max_length=100)
+    rating = PositiveSmallIntegerField(default=5, help_text="1–5")
+    review_text = TextField()
+    review_date = DateField()
+    platform = CharField(max_length=50, default='Google')
+
+    def __str__(self):
+        return f"{self.title} ({self.rating}⭐)"
+
+
+class TransportPrice(Model):
+    distance_range = CharField(max_length=500, help_text="0 - 500 miles")
+    transport_type = CharField(max_length=500, help_text="Enclosed")
+    avg_price_per_mile = DecimalField(max_digits=5, decimal_places=2, help_text="1.25")
+    sample_distance = PositiveBigIntegerField(help_text="300")
+    sample_price = DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.distance_range} ({self.transport_type})"

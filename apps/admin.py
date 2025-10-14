@@ -3,7 +3,7 @@ from django.contrib.admin import ModelAdmin
 from import_export.admin import ExportMixin
 
 from apps.models import Footer, Stats, Partners, BlogPost, About, FAQ, Overview, Review, Seo, Page, Stories, \
-    TelegramConfig
+    TelegramConfig, CustomerReview, TransportPrice
 from apps.models.main_model import MainPage, QuoteRequest, ChooseXpress
 from apps.resources import MainPageResource
 
@@ -90,8 +90,9 @@ class TelegramConfigAdmin(admin.ModelAdmin):
 admin.site.register(Overview)
 admin.site.register(Review)
 admin.site.register(Seo)
+admin.site.register(CustomerReview)
+admin.site.register(TransportPrice)
 admin.site.register(Page)
-
 
 admin.site.site_header = "XPress Management"
 admin.site.site_title = "XPress Admin Portal"

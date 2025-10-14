@@ -14,3 +14,7 @@ class Footer(Model):
 class Partners(Model):
     title = CharField(max_length=255, null=True, blank=True, help_text='Name of partner')
     image = ImageField(upload_to='partners/')
+
+    class Meta:
+        verbose_name = 'Partners'
+        verbose_name_plural = 'Partners'

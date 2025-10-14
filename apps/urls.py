@@ -4,7 +4,8 @@ from apps.views import BlogListAPIView, AboutListAPIView, FAQListAPIView, Simple
     FooterListCreate, PartnerListCreate, StatsListCreate, MainPageListAPIView, DirectlyContactListAPIView, \
     ContactOptionListCreate, SimpleStepsListAPIView, ChooseXpressListAPIView, OverviewListAPIView, \
     OrderStep1CreateAPIView, MainAboutListAPIView, ReviewListAPIView, VehicleMakeAPIView, VehicleYearAPIView, \
-    VehicleModelAPIView, ZipCodeAPIView, PageListAPIView, SeoListAPIView, StoriesListAPIView
+    VehicleModelAPIView, ZipCodeAPIView, PageListAPIView, SeoListAPIView, StoriesListAPIView, CustomerReviewListAPIView, \
+    TransportPriceListAPIView
 
 urlpatterns = [
     # todo main
@@ -35,8 +36,10 @@ urlpatterns = [
     path("stars/", ReviewListAPIView.as_view(), name="star_list"),
 
     # todo Seo and Page
-    path("seo/", PageListAPIView.as_view(), name="seo_list"),
-    path("page/", SeoListAPIView.as_view(), name="page_list"),
+    path("seo/", SeoListAPIView.as_view(), name="seo_list"),
+    path("page/", PageListAPIView.as_view(), name="page_list"),
+    path("customer/review/", CustomerReviewListAPIView.as_view(), name="customer_review"),
+    path("transport/price/", TransportPriceListAPIView.as_view(), name="transport_price"),
 
     # todo apis
     path("vehicle-makes/", VehicleMakeAPIView.as_view(), name="vehicle-makes"),

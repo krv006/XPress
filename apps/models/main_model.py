@@ -10,6 +10,9 @@ class MainPage(Model):
     description = CKEditor5Field()
     contact_us = CharField(max_length=100, help_text='Misol uchun: (929) 566-5040')
 
+    class Meta:
+        verbose_name = 'Main Page'
+        verbose_name_plural = 'Main Page'
 
 class QuoteRequest(Model):
     class Contacts(TextChoices):
@@ -31,6 +34,9 @@ class ChooseXpress(Model):
     title = CharField(max_length=500)
     description = CKEditor5Field()
 
+    class Meta:
+        verbose_name = 'Why choose us'
+        verbose_name_plural = 'Why choose us'
 
 # todo What Makes Us Stand Out?
 class Overview(Model):
@@ -51,6 +57,9 @@ class Stats(Model):
     def __str__(self):
         return f"{self.title}: {self.count}+"
 
+    class Meta:
+        verbose_name = 'Statistics'
+        verbose_name_plural = 'Statistics'
 
 class MainAbout(Model):
     title = CharField(max_length=500)

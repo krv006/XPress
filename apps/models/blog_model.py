@@ -15,6 +15,9 @@ class BlogPost(Model):
     created = DateTimeField(auto_now_add=True)
     seo = ForeignKey('apps.Seo', CASCADE, related_name='blog_posts')
 
+    class Meta:
+        verbose_name = "Blog Post"
+        verbose_name_plural = "Blog Post"
 
 class Review(Model):
     title = CharField(max_length=500)
@@ -38,6 +41,9 @@ class Stories(Model):
     created = DateTimeField(auto_now_add=True)
     seo = ForeignKey('apps.Seo', CASCADE, related_name='stories')
 
+    class Meta:
+        verbose_name = 'Stories'
+        verbose_name_plural = 'Stories'
 
 class TelegramConfig(Model):
     bot_token = CharField(max_length=200)
