@@ -19,6 +19,7 @@ class BlogPost(Model):
         verbose_name = "Blog Post"
         verbose_name_plural = "Blog Post"
 
+
 class Review(Model):
     title = CharField(max_length=500)
     costumers_rating = PositiveSmallIntegerField(help_text="14, 45, 150")
@@ -45,6 +46,10 @@ class Stories(Model):
         verbose_name = 'Stories'
         verbose_name_plural = 'Stories'
 
+
 class TelegramConfig(Model):
     bot_token = CharField(max_length=200)
     chat_id = CharField(max_length=100)
+
+    def __str__(self):
+        return self.chat_id

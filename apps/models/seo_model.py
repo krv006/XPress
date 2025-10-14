@@ -18,6 +18,8 @@ class Seo(Model):
     description = CKEditor5Field()
     keywords = CharField(max_length=1000)
 
+    def __str__(self):
+        return f'{self.title} ({self.keywords})'
 
 class Page(Model):
     title = CharField(max_length=256, validators=[MinLengthValidator(1)])
