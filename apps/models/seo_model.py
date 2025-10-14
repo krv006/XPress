@@ -1,5 +1,6 @@
 from django.core.validators import MinLengthValidator, RegexValidator
 from django.db.models import Model, CharField, TextField, SlugField, ImageField, DateTimeField
+from django_ckeditor_5.fields import CKEditor5Field
 
 slug_validator = RegexValidator(
     regex=r'^[A-Za-z0-9_]+$',
@@ -13,6 +14,8 @@ def title_logo_upload_to(instance, filename):
 
 class Seo(Model):
     title = CharField(max_length=1000)
+    description = CKEditor5Field()
+    keywords = CharField(max_length=1000)
 
 
 class Page(Model):

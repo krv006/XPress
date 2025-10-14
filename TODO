@@ -68,3 +68,11 @@ CHAT_ID = -4913366579
 
 docker run --name postgres  -e POSTGRES_USER=postgres  -e POSTGRES_PASSWORD=1 -e POSTGRES_DB=xpress   -p 5433:5432   -v postgres_data:/var/lib/postgresql/data  -d postgres:15
 
+
+
+NEW TASK
+
+seo
+description
+keywords
+

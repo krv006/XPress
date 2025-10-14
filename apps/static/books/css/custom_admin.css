@@ -1,0 +1,99 @@
+.brand-image {
+    width: 225px !important; /* oldingi 120px edi, kamaytiramiz */
+    height: auto !important;
+    object-fit: contain;
+}
+
+.login-logo img {
+    width: 500px !important;
+    height: auto !important;
+}
+
+
+/* === ADMIN UI YAXSHILASH === */
+.navbar {
+    background-color: #0A1931 !important; /* XPress asosiy rang */
+}
+
+.sidebar {
+    background-color: #111827 !important;
+}
+
+.brand-link {
+    background-color: #0A1931 !important;
+    color: #ffffff !important;
+}
+
+
+
+.nav-link:hover {
+    background-color: #374151 !important;
+    color: #ffffff !important;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif !important;
+}
+
+
+/* --- Form button lar --- */
+.btn-success {
+    background-color: #10B981 !important;
+    border-color: #10B981 !important;
+}
+
+.btn-danger {
+    background-color: #EF4444 !important;
+    border-color: #EF4444 !important;
+}
+
+.content-header h1 {
+    color: #1E3A8A !important; /* XPress ko‘k rangi */
+    font-weight: 700 !important;
+    font-size: 26px !important;
+    letter-spacing: 0.5px;
+}
+
+.navbar, .navbar.navbar-static-top {
+    background-color: #0a1a33 !important;
+}
+
+/* Barcha linklar (shu jumladan "Saytga o'tish", "Users", "Support") */
+.navbar a,
+.navbar .nav-link,
+.navbar .navbar-nav > li > a {
+    color: #9ccaff !important;   /* och ko‘k rang */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Hover holati */
+.navbar a:hover,
+.navbar .nav-link:hover,
+.navbar .navbar-nav > li > a:hover {
+    color: #ffffff !important;
+    background-color: rgba(30, 58, 138, 0.3) !important;
+    border-radius: 6px;
+}
+
+/* Active holat ("Xpress" yoki tanlangan sahifa) */
+.navbar .nav-link.active,
+.navbar .navbar-nav > li.active > a,
+.navbar .navbar-nav > li > a.active {
+    background-color: #1E3A8A !important;
+    color: #ffffff !important;
+    border-radius: 6px;
+}
+
+/* Navbar brand (Xpress logotipi yoki nomi) */
+.navbar .navbar-brand {
+    background-color: #1E3A8A !important;
+    color: #fff !important;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+#container, .login-container {
+    background-color: transparent !important;
+}

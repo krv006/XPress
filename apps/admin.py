@@ -91,3 +91,8 @@ admin.site.register(Overview)
 admin.site.register(Review)
 admin.site.register(Seo)
 admin.site.register(Page)
+
+
+admin.site.site_header = "XPress Management"
+admin.site.site_title = "XPress Admin Portal"
+admin.site.index_title = "XPress Dashboard"
