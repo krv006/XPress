@@ -63,6 +63,8 @@ class TransportPrice(Model):
     avg_price_per_mile = DecimalField(max_digits=5, decimal_places=2, help_text="1.25")
     sample_distance = PositiveBigIntegerField(help_text="300")
     sample_price = DecimalField(max_digits=10, decimal_places=2)
+    latitude = CharField(max_length=55, null=True, blank=True, help_text="41.312345")
+    longitude = CharField(max_length=55, null=True, blank=True, help_text="69.278912")
 
     def __str__(self):
         return f"{self.distance_range} ({self.transport_type})"
